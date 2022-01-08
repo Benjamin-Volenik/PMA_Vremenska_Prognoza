@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/moja_navigacija"
+    app:startDestination="@id/fragmentOsnovnaPrognoza">
+
+    <fragment
+        android:id="@+id/fragmentOsnovnaPrognoza"
+        android:name="com.example.vremenskaprognoza.FragmentOsnovnaPrognoza"
+        android:label="fragment_osnovna_prognoza"
+        tools:layout="@layout/fragment_osnovna_prognoza" />
+    <fragment
+        android:id="@+id/fragmentNaprednaPrognoza"
+        android:name="com.example.vremenskaprognoza.FragmentNaprednaPrognoza"
+        android:label="fragment_napredna_prognoza"
+        tools:layout="@layout/fragment_napredna_prognoza" />
+    <fragment
+        android:id="@+id/fragmentTjednaPrognoza"
+        android:name="com.example.vremenskaprognoza.FragmentTjednaPrognoza"
+        android:label="fragment_tjedna_prognoza"
+        tools:layout="@layout/fragment_tjedna_prognoza" />
+    <fragment
+        android:id="@+id/fragmentGrad"
+        android:name="com.example.vremenskaprognoza.FragmentGrad"
+        android:label="fragment_grad"
+        tools:layout="@layout/fragment_grad" />
+</navigation>
