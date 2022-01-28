@@ -64,5 +64,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLokacija" />
 
+    <ImageView
+        android:id="@+id/imgIkona"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/txtNebo"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

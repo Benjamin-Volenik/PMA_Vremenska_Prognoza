@@ -1,47 +1,40 @@
 package com.example.vremenskaprognoza;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentNaprednaPrognoza#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class FragmentNaprednaPrognoza extends Fragment {
+import org.w3c.dom.Text;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import java.io.Serializable;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+
+public class FragmentNaprednaPrognoza extends Fragment implements Serializable {
+
+    View view;
+    TextView NaprednaLokacija,NaprednaNebo,NaprednaTemp,NaprednaMaxTemp,NaprednaMinTemp;
+    FragmentListener mCallback;
+    String Lokacija,Nebo,Temperatura,MinTemp,MaxTemp,Zemlja;
+
 
     public FragmentNaprednaPrognoza() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentNaprednaPrognoza.
-     */
-    // TODO: Rename and change types and number of parameters
     public static FragmentNaprednaPrognoza newInstance(String param1, String param2) {
         FragmentNaprednaPrognoza fragment = new FragmentNaprednaPrognoza();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,16 +42,48 @@ public class FragmentNaprednaPrognoza extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        Lokacija = mCallback.getLokacija();
+        Nebo = mCallback.getNebo();
+        Temperatura = mCallback.getTemp();
+        MinTemp = mCallback.getMinTemp();
+        MaxTemp = mCallback.getMaxTemp();
+        Zemlja = mCallback.getZemlja();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_napredna_prognoza, container, false);
+       view = inflater.inflate(R.layout.fragment_napredna_prognoza, container, false);
+
+       NaprednaLokacija = view.findViewById(R.id.txtNaprednaLokacija);
+       NaprednaNebo = view.findViewById(R.id.txtNaprednaNebo);
+       NaprednaTemp = view.findViewById(R.id.txtNaprednaTemperatura);
+       NaprednaMaxTemp = view.findViewById(R.id.txtMaxTemp);
+       NaprednaMinTemp = view.findViewById(R.id.txtMinTemp);
+
+        NaprednaLokacija.setText(Lokacija + "- " + Zemlja);
+        NaprednaNebo.setText(Nebo);
+        NaprednaTemp.setText(Temperatura + "°C");
+        NaprednaMaxTemp.setText("Max temp.:" + MaxTemp + "°C");
+        NaprednaMinTemp.setText("Min temp.:" + MinTemp + "°C");
+
+
+
+
+       return view;
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            mCallback = (FragmentListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()
+                    + " must implement DataCommunication");
+        }
     }
 }
