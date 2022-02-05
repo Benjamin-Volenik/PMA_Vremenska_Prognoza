@@ -125,7 +125,13 @@ public class FragmentOsnovnaPrognoza extends Fragment implements LocationListene
                     MaxTemp = Float.toString((weatherResponse.main.temp_max));
                     MinTemp = Float.toString((weatherResponse.main.temp_min));
                     Zemlja = weatherResponse.sys.country;
+                    mCallback.setIzlazakSunca(weatherResponse.sys.sunrise);
+                    mCallback.setZalazakSunca(weatherResponse.sys.sunset);
+                    mCallback.setVjetar(Float.toString(weatherResponse.wind.speed));
+                    mCallback.setPritisak(Integer.toString(weatherResponse.main.pressure));
+                    mCallback.setVlaznost(Integer.toString(weatherResponse.main.humidity));
                     Ikona = weatherResponse.weather.get(0).icon;
+                    mCallback.setIkona(Ikona);
                     try {
                         newurl = new URL("http://openweathermap.org/img/w/" + Ikona + ".png");
                     } catch (MalformedURLException e) {

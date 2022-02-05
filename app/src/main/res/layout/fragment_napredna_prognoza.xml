@@ -12,25 +12,6 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginBottom="80dp"
-            android:src="@drawable/ic_baseline_cloud_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="5dp"
-            android:text="TextView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/txtNaslov"
@@ -52,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="16dp"
             android:text="Lokacija"
             android:textColor="@color/white"
@@ -66,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:text="Cisto Nebo"
             android:textColor="@color/white"
@@ -80,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="16dp"
             android:text="20°C"
             android:textColor="@color/white"
@@ -110,6 +91,247 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNaprednaTemperatura" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="113dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="#3CF1EBF1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMaxTemp">
+
+            <ImageView
+                android:id="@+id/imageViewIzlazakSunca"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/sunrise"
+                app:tint="#FFF" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+
+            <TextView
+                android:id="@+id/textViewIzlazakSunca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Izlazak sunca"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtIzlazakSunca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:30"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="113dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="#3CF1EBF1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/txtMaxTemp">
+
+            <ImageView
+                android:id="@+id/imageViewZalazakSunca"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/sunset"
+                app:tint="#FFF" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+
+            <TextView
+                android:id="@+id/textViewZalazakSunca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zalazak sunca"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtZalazakSunca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:30"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="113dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="#3CF1EBF1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/txtMaxTemp">
+
+            <ImageView
+                android:id="@+id/imageViewVjetar"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/wind"
+                app:tint="#FFF" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+
+            <TextView
+                android:id="@+id/textViewVjetar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brzina vjetra"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtVjetar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:30"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="113dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="#3CF1EBF1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <ImageView
+                android:id="@+id/imageViewPritisak"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/pressure"
+                app:tint="#FFF" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+
+            <TextView
+                android:id="@+id/textViewPritisak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pritisak"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtPritisak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:30"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="113dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="#3CF1EBF1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <ImageView
+                android:id="@+id/imageViewVlaznost"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/humidity"
+                app:tint="#FFF" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+
+            <TextView
+                android:id="@+id/textViewVlaznost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vlažnost zraka"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtVlaznost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:30"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewNaprednaIkona"
+            android:layout_width="66dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_cloud_24"
+            app:layout_constraintEnd_toStartOf="@+id/txtNaprednaNebo"
+            app:layout_constraintTop_toBottomOf="@+id/txtNaslov" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -24,6 +24,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTjednaNaslov" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPon" />
+
     <TextView
         android:id="@+id/txtUtorak"
         android:layout_width="wrap_content"
@@ -36,17 +45,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPon" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSrijeda" />
+
     <TextView
         android:id="@+id/txtCetvratk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
-        android:text="Četvratk"
+        android:text="Četvrtak"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSrijeda" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCetvratk" />
 
     <TextView
         android:id="@+id/txtPetak"
@@ -60,6 +90,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCetvratk" />
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPetak" />
+
     <TextView
         android:id="@+id/txtSubota"
         android:layout_width="wrap_content"
@@ -71,6 +112,15 @@
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPetak" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubota" />
 
     <TextView
         android:id="@+id/txtNedjelja"
@@ -96,6 +146,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUtorak" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUtorak" />
+
     <TextView
         android:id="@+id/txtTjednaNaslov"
         android:layout_width="wrap_content"
@@ -115,24 +175,24 @@
         android:id="@+id/textPon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="45dp"
         android:text="20°C"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/txtPon"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTjednaNaslov" />
 
     <TextView
         android:id="@+id/txtTempUto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="30dp"
         android:text="20°C"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/txtUtorak"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPon" />
 
 
@@ -140,61 +200,215 @@
         android:id="@+id/txtTempSri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="30dp"
         android:text="20°C"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/txtSrijeda"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUtorak" />
 
     <TextView
         android:id="@+id/txtTempCet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="30dp"
         android:text="20°C"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/txtCetvratk"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSrijeda" />
 
     <TextView
         android:id="@+id/txtTempPet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="30dp"
         android:text="20°C"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/txtPetak"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCetvratk" />
 
     <TextView
         android:id="@+id/txtTempSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="30dp"
         android:text="20°C"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/txtSubota"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPetak" />
 
     <TextView
         android:id="@+id/txtNed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="30dp"
         android:text="20°C"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/txtNedjelja"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSubota" />
+
+    <TextView
+        android:id="@+id/textViewNebo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="52dp"
+        android:text="Vedro"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/textPon"
+        app:layout_constraintTop_toBottomOf="@+id/txtTjednaNaslov" />
+
+    <TextView
+        android:id="@+id/textViewNebo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:text="Kisa jakog intenziteta"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/txtTempUto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNebo1" />
+
+    <TextView
+        android:id="@+id/textViewNebo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Vedro"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/txtTempSri"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNebo2" />
+
+    <TextView
+        android:id="@+id/textViewNebo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:text="Vedro"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/txtTempCet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNebo3" />
+
+    <TextView
+        android:id="@+id/textViewNebo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Vedro"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/txtTempPet"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textViewNebo6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:text="Vedro"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/txtTempSub"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textViewNebo7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="Vedro"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/txtNed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNebo6" />
+
+    <ImageView
+        android:id="@+id/imageViewPon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/textPon"
+        app:layout_constraintTop_toBottomOf="@+id/txtTjednaNaslov" />
+
+    <ImageView
+        android:id="@+id/imageViewUto"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/txtTempUto"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPon" />
+
+    <ImageView
+        android:id="@+id/imageViewSri"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/txtTempSri"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUto" />
+
+    <ImageView
+        android:id="@+id/imageViewCet"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/txtTempCet"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSri" />
+
+    <ImageView
+        android:id="@+id/imageViewPet"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/txtTempPet"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCet" />
+
+    <ImageView
+        android:id="@+id/imageViewSub"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/txtTempSub"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPet" />
+
+    <ImageView
+        android:id="@+id/imageViewNed"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toStartOf="@+id/txtNed"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSub" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

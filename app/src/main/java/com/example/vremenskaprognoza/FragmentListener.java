@@ -8,6 +8,12 @@ public interface FragmentListener {
     void setMaxTemp(String maxtemp);
     void setMintemp(String mintemp);
     void setZemlja(String zemlja);
+    void setIzlazakSunca(Long izlazaksunca);
+    void setZalazakSunca(Long zalazakSunca);
+    void setVjetar(String vjetar);
+    void setPritisak(String pritisak);
+    void setVlaznost(String vlaznost);
+    void setIkona(String ikona);
 
 
     String getLokacija();
@@ -16,5 +22,11 @@ public interface FragmentListener {
     String getMaxTemp();
     String getMinTemp();
     String getZemlja();
+    Long getIzlazakSunca();
+    Long getZalazakSunca();
+    String getVjetar();
+    String getPritisak();
+    String getVlaznost();
+    String getIkona();
 
 }

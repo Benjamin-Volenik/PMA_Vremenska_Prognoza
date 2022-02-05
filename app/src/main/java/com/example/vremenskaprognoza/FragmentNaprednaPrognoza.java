@@ -9,11 +9,20 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import org.w3c.dom.Text;
 
 import java.io.Serializable;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,9 +32,12 @@ import retrofit2.Response;
 public class FragmentNaprednaPrognoza extends Fragment implements Serializable {
 
     View view;
-    TextView NaprednaLokacija,NaprednaNebo,NaprednaTemp,NaprednaMaxTemp,NaprednaMinTemp;
+    TextView NaprednaLokacija,NaprednaNebo,NaprednaTemp,NaprednaMaxTemp,NaprednaMinTemp,NaprednaIzlazakSunca,NaprednaZalazakSunca,NaprednaVjetar,NaprednaPritisak,NaprednaVlaznost;
     FragmentListener mCallback;
-    String Lokacija,Nebo,Temperatura,MinTemp,MaxTemp,Zemlja;
+    String Lokacija,Nebo,Temperatura,MinTemp,MaxTemp,Zemlja,IzlazakSunca,ZalazakSunca,Vjetar,Pritisak,Vlaznost,Ikona;
+    URL newurl;
+    ImageView imgIkona;
+
 
 
     public FragmentNaprednaPrognoza() {
@@ -49,6 +61,17 @@ public class FragmentNaprednaPrognoza extends Fragment implements Serializable {
         MinTemp = mCallback.getMinTemp();
         MaxTemp = mCallback.getMaxTemp();
         Zemlja = mCallback.getZemlja();
+        Long longIzlazak  = mCallback.getIzlazakSunca();
+        Long longZalazak  = mCallback.getZalazakSunca();
+        Vjetar = mCallback.getVjetar();
+        Pritisak = mCallback.getPritisak();
+        Vlaznost = mCallback.getVlaznost();
+        Ikona = mCallback.getIkona();
+        Date izalzak = new Date(longIzlazak * 1000L);
+        Date zalazak = new Date(longZalazak * 1000L);
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm");
+        IzlazakSunca = dateFormat.format(izalzak);
+        ZalazakSunca = dateFormat.format(zalazak);
 
     }
 
@@ -63,12 +86,32 @@ public class FragmentNaprednaPrognoza extends Fragment implements Serializable {
        NaprednaTemp = view.findViewById(R.id.txtNaprednaTemperatura);
        NaprednaMaxTemp = view.findViewById(R.id.txtMaxTemp);
        NaprednaMinTemp = view.findViewById(R.id.txtMinTemp);
+       NaprednaIzlazakSunca = view.findViewById(R.id.txtIzlazakSunca);
+       NaprednaZalazakSunca = view.findViewById(R.id.txtZalazakSunca);
+       NaprednaVjetar = view.findViewById(R.id.txtVjetar);
+       NaprednaPritisak = view.findViewById(R.id.txtPritisak);
+       NaprednaVlaznost = view.findViewById(R.id.txtVlaznost);
+       imgIkona = view.findViewById(R.id.imageViewNaprednaIkona);
 
         NaprednaLokacija.setText(Lokacija + "- " + Zemlja);
         NaprednaNebo.setText(Nebo);
         NaprednaTemp.setText(Temperatura + "°C");
         NaprednaMaxTemp.setText("Max temp.:" + MaxTemp + "°C");
         NaprednaMinTemp.setText("Min temp.:" + MinTemp + "°C");
+        NaprednaIzlazakSunca.setText(IzlazakSunca);
+        NaprednaZalazakSunca.setText(ZalazakSunca);
+        NaprednaVjetar.setText(Vjetar);
+        NaprednaPritisak.setText(Pritisak);
+        NaprednaVlaznost.setText(Vlaznost);
+
+        try {
+            newurl = new URL("http://openweathermap.org/img/w/" + Ikona + ".png");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        if(getActivity()!= null) {
+            Glide.with(getActivity()).load(newurl).diskCacheStrategy(DiskCacheStrategy.NONE).into(imgIkona);
+        }
 
 
 

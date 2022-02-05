@@ -23,6 +23,12 @@ public class PocetniZaslon extends AppCompatActivity implements FragmentListener
     private String MinTemp;
     private String MaxTemp;
     private String Zemlja;
+    private Long IzlazakSunca;
+    private Long ZalazakSunca;
+    private String Vjetar;
+    private String Pritisak;
+    private String Vlaznost;
+    private String Ikona;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +80,37 @@ public class PocetniZaslon extends AppCompatActivity implements FragmentListener
         this.Zemlja = zemlja;
     }
 
+    public void setIzlazakSunca(Long izlazaksunca)
+    {
+        this.IzlazakSunca = izlazaksunca;
+    }
+
+    public void setZalazakSunca(Long zalazaksunca)
+    {
+        this.ZalazakSunca = zalazaksunca;
+    }
+
+    public void setVjetar(String vjetar)
+    {
+        this.Vjetar = vjetar;
+    }
+
+    public void setPritisak(String pritisak)
+    {
+        this.Pritisak = pritisak;
+    }
+
+    public void setVlaznost(String vlaznost)
+    {
+        this.Vlaznost = vlaznost;
+    }
+
+    @Override
+    public void setIkona(String ikona) {
+        this.Ikona = ikona;
+    }
+
+
     @Override
     public String getLokacija() {
         return Lokacija;
@@ -102,5 +139,35 @@ public class PocetniZaslon extends AppCompatActivity implements FragmentListener
     @Override
     public String getZemlja() {
         return Zemlja;
+    }
+
+    @Override
+    public Long getIzlazakSunca() {
+        return IzlazakSunca;
+    }
+
+    @Override
+    public Long getZalazakSunca() {
+        return ZalazakSunca;
+    }
+
+    @Override
+    public String getVjetar() {
+        return Vjetar;
+    }
+
+    @Override
+    public String getPritisak() {
+        return Pritisak;
+    }
+
+    @Override
+    public String getVlaznost() {
+        return Vlaznost;
+    }
+
+    @Override
+    public String getIkona() {
+        return Ikona;
     }
 }
