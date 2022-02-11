@@ -28,6 +28,7 @@ public class PocetniZaslon extends AppCompatActivity implements FragmentListener
     private String Vjetar;
     private String Pritisak;
     private String Vlaznost;
+    private Float Kisa;
     private String Ikona;
 
     @Override
@@ -106,6 +107,11 @@ public class PocetniZaslon extends AppCompatActivity implements FragmentListener
     }
 
     @Override
+    public void setKisa(Float kisa) {
+        this.Kisa = kisa;
+    }
+
+    @Override
     public void setIkona(String ikona) {
         this.Ikona = ikona;
     }
@@ -164,6 +170,11 @@ public class PocetniZaslon extends AppCompatActivity implements FragmentListener
     @Override
     public String getVlaznost() {
         return Vlaznost;
+    }
+
+    @Override
+    public Float getKisa() {
+        return Kisa;
     }
 
     @Override

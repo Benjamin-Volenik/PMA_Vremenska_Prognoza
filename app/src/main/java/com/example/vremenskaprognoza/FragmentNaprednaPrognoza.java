@@ -32,9 +32,10 @@ import retrofit2.Response;
 public class FragmentNaprednaPrognoza extends Fragment implements Serializable {
 
     View view;
-    TextView NaprednaLokacija,NaprednaNebo,NaprednaTemp,NaprednaMaxTemp,NaprednaMinTemp,NaprednaIzlazakSunca,NaprednaZalazakSunca,NaprednaVjetar,NaprednaPritisak,NaprednaVlaznost;
+    TextView NaprednaLokacija,NaprednaNebo,NaprednaTemp,NaprednaMaxTemp,NaprednaMinTemp,NaprednaIzlazakSunca,NaprednaZalazakSunca,NaprednaVjetar,NaprednaPritisak,NaprednaVlaznost,NaprednaKisa;
     FragmentListener mCallback;
     String Lokacija,Nebo,Temperatura,MinTemp,MaxTemp,Zemlja,IzlazakSunca,ZalazakSunca,Vjetar,Pritisak,Vlaznost,Ikona;
+    Float Kisa;
     URL newurl;
     ImageView imgIkona;
 
@@ -69,9 +70,10 @@ public class FragmentNaprednaPrognoza extends Fragment implements Serializable {
         Ikona = mCallback.getIkona();
         Date izalzak = new Date(longIzlazak * 1000L);
         Date zalazak = new Date(longZalazak * 1000L);
-        DateFormat dateFormat = new SimpleDateFormat("hh:mm");
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm");
         IzlazakSunca = dateFormat.format(izalzak);
         ZalazakSunca = dateFormat.format(zalazak);
+        Kisa = mCallback.getKisa();
 
     }
 
@@ -91,18 +93,20 @@ public class FragmentNaprednaPrognoza extends Fragment implements Serializable {
        NaprednaVjetar = view.findViewById(R.id.txtVjetar);
        NaprednaPritisak = view.findViewById(R.id.txtPritisak);
        NaprednaVlaznost = view.findViewById(R.id.txtVlaznost);
+       NaprednaKisa = view.findViewById(R.id.txtKisa);
        imgIkona = view.findViewById(R.id.imageViewNaprednaIkona);
 
-        NaprednaLokacija.setText(Lokacija + "- " + Zemlja);
+        NaprednaLokacija.setText(Lokacija + " - " + Zemlja);
         NaprednaNebo.setText(Nebo);
         NaprednaTemp.setText(Temperatura + "°C");
-        NaprednaMaxTemp.setText("Max temp.:" + MaxTemp + "°C");
-        NaprednaMinTemp.setText("Min temp.:" + MinTemp + "°C");
-        NaprednaIzlazakSunca.setText(IzlazakSunca);
-        NaprednaZalazakSunca.setText(ZalazakSunca);
-        NaprednaVjetar.setText(Vjetar);
-        NaprednaPritisak.setText(Pritisak);
-        NaprednaVlaznost.setText(Vlaznost);
+        NaprednaMaxTemp.setText("Max temp: " + MaxTemp + "°C");
+        NaprednaMinTemp.setText("Min temp: " + MinTemp + "°C");
+        NaprednaIzlazakSunca.setText(IzlazakSunca + "h");
+        NaprednaZalazakSunca.setText(ZalazakSunca + "h");
+        NaprednaVjetar.setText(Vjetar + " m/s");
+        NaprednaPritisak.setText(Pritisak + " hPa");
+        NaprednaVlaznost.setText(Vlaznost + "%");
+        NaprednaKisa.setText(Kisa.toString() + " mm");
 
         try {
             newurl = new URL("http://openweathermap.org/img/w/" + Ikona + ".png");

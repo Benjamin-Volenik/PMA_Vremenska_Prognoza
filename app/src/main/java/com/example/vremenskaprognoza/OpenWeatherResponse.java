@@ -48,8 +48,8 @@ class Clouds {
 }
 
 class Rain {
-    @SerializedName("3h")
-    public float h3;
+    @SerializedName("1h")
+    public float h1;
 }
 
 class Wind {
@@ -70,6 +70,8 @@ class Main {
     public float temp_min;
     @SerializedName("temp_max")
     public float temp_max;
+    @SerializedName("feels_like")
+    public float feels_like;
 }
 
 class Sys {

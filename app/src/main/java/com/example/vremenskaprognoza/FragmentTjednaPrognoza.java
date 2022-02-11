@@ -86,8 +86,6 @@ public class FragmentTjednaPrognoza extends Fragment {
                     Date expiry5 = new Date(weatherResponse.daily.get(5).dt * 1000L);
                     Date expiry6 = new Date(weatherResponse.daily.get(6).dt * 1000L);
                     Date expiry7 = new Date(weatherResponse.daily.get(7).dt * 1000L);
-                    DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-                    String strDate = dateFormat.format(expiry);
                     SimpleDateFormat sdf = new SimpleDateFormat("EEEE", new Locale("hr", "HR"));
                     String dayOfTheWeek = sdf.format(expiry);
                     String dayOfTheWeek2 = sdf.format(expiry2);

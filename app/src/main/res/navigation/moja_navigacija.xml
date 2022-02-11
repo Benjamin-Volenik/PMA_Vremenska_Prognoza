@@ -20,9 +20,5 @@
         android:name="com.example.vremenskaprognoza.FragmentTjednaPrognoza"
         android:label="fragment_tjedna_prognoza"
         tools:layout="@layout/fragment_tjedna_prognoza" />
-    <fragment
-        android:id="@+id/fragmentGrad"
-        android:name="com.example.vremenskaprognoza.FragmentGrad"
-        android:label="fragment_grad"
-        tools:layout="@layout/fragment_grad" />
+
 </navigation>

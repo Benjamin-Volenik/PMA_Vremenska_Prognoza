@@ -13,8 +13,5 @@
         android:id="@+id/fragmentTjednaPrognoza"
         android:icon="@drawable/ic_baseline_view_week_24"
         android:title="Tjedna prognoza" />
-    <item
-        android:id="@+id/fragmentGrad"
-        android:icon="@drawable/ic_baseline_location_on_24"
-        android:title="Odabir grada" />
+
 </menu>

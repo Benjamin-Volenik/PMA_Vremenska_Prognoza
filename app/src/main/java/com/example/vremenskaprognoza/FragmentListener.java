@@ -13,6 +13,7 @@ public interface FragmentListener {
     void setVjetar(String vjetar);
     void setPritisak(String pritisak);
     void setVlaznost(String vlaznost);
+    void setKisa(Float kisa);
     void setIkona(String ikona);
 
 
@@ -27,6 +28,7 @@ public interface FragmentListener {
     String getVjetar();
     String getPritisak();
     String getVlaznost();
+    Float getKisa();
     String getIkona();
 
 }
