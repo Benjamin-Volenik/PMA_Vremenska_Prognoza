@@ -49,7 +49,6 @@ public class FragmentTjednaPrognoza extends Fragment {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
     public static FragmentTjednaPrognoza newInstance(String param1, String param2) {
         FragmentTjednaPrognoza fragment = new FragmentTjednaPrognoza();
         Bundle args = new Bundle();
@@ -63,9 +62,11 @@ public class FragmentTjednaPrognoza extends Fragment {
         super.onCreate(savedInstanceState);
 
         Lokacija = mCallback.getLokacija();
+        Locale Drzava = new Locale("", mCallback.getZemlja());
+        String country = Drzava.getDisplayCountry();
         Geocoder geoCoder = new Geocoder(getActivity(), Locale.getDefault());
         try {
-            List<Address> ads = geoCoder.getFromLocationName(Lokacija,1);
+            List<Address> ads = geoCoder.getFromLocationName(Lokacija + "," + country,1);
             lat = String.valueOf(ads.get(0).getLatitude());
             lon = String.valueOf(ads.get(0).getLongitude());
         } catch (IOException e) {
@@ -183,6 +184,7 @@ public class FragmentTjednaPrognoza extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_tjedna_prognoza, container, false);
 
+        //temperatura
         txtpon = view.findViewById(R.id.textPon);
         txtuto = view.findViewById(R.id.txtTempUto);
         txtsri = view.findViewById(R.id.txtTempSri);
@@ -191,6 +193,7 @@ public class FragmentTjednaPrognoza extends Fragment {
         txtsub = view.findViewById(R.id.txtTempSub);
         txtned = view.findViewById(R.id.txtNed);
 
+        //dan u tjednu
         getTxtpon = view.findViewById(R.id.txtPon);
         getTxtuto = view.findViewById(R.id.txtUtorak);
         getTxtsri = view.findViewById(R.id.txtSrijeda);

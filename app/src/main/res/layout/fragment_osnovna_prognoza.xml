@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:text="Lokacija"
+        android:text="Učitavanje..."
         android:textColor="@color/white"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,14 +25,12 @@
         android:id="@+id/txtNebo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="136dp"
-        android:text="Cisto Nebo"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgIkona"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAzurirano" />
 
     <TextView
@@ -42,7 +40,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="20°C"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="90sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +54,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,14 +63,11 @@
 
     <ImageView
         android:id="@+id/imgIkona"
-        android:layout_width="56dp"
+        android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="104dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_baseline_cloud_24"
         app:layout_constraintEnd_toStartOf="@+id/txtNebo"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAzurirano" />
 
     <Button
@@ -110,7 +105,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Stvarni osjecaj: 20°C"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
